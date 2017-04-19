@@ -65,7 +65,8 @@ describe('macaca mobile sample', function() {
 
   before(function() {
     return driver
-      .init(isIOS ? iOSOpts : androidOpts);
+      .init(isIOS ? iOSOpts : androidOpts)
+      .waitForElementByID('com.github.android_app_bootstrap:id/info');
   });
 
   after(function() {
